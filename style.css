@@ -1,0 +1,187 @@
+:root {
+  --computer-bg: #13bd78;
+  --computer-fg: #8e00af;
+  --computer-stand: #13a26b;
+  --cpu-start-bg: #c62ceb;
+  --cpu-start-fg: #33da93;
+  --cpu-sticker: #aa0dd2;
+}
+body {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+   position: relative;
+  
+}
+
+.computer {
+  position: relative;
+  background: var(--computer-bg);
+  width: 60%;
+  height: 40%;
+  top: 20%;
+}
+
+.computer::after {
+  content: "";
+  position: absolute;
+  left: 2.5%;
+  top: 5%;
+  width: 95%;
+  height: 90%;
+  background-color: var(--computer-fg)
+}
+
+.computer-stand {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--computer-stand);
+  width: 30px;
+  height: 40px;
+}
+
+.computer-bottom {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  height: 10px;
+  background-color: var(--computer-stand);
+  top: calc(100% + 40px);
+}
+
+.cpu {
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  right: 5%;
+  top: 10%;
+  background: var(--computer-fg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.start {
+  width: 40px;
+  height: 40px;
+  background: var(--cpu-start-bg);
+  
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.start-button {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent var(--cpu-start-fg)  var(--cpu-start-fg)  var(--cpu-start-fg);
+  border-radius: 50%;
+  bottom: 37px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.start-button::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  background-color: var(--cpu-start-fg);
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.sticker {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  width: 70%;
+  height: 15px;
+  transform: translateX(-50%);
+  background: var(--cpu-sticker);
+  border-radius: 5px;
+}
+
+.top-bg {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.top-bg div {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+  var(--cpu-sticker) 0, var(--cpu-sticker) 30%,
+  var(--cpu-start-bg) 30%, var(--cpu-start-bg) 40%,
+  var(--cpu-sticker) 40%, var(--cpu-sticker) 50%,
+  var(--cpu-start-bg) 50%, var(--cpu-start-bg) 60%,
+  var(--cpu-sticker) 60%, var(--cpu-sticker) 70%,
+  var(--cpu-start-bg) 70%, var(--cpu-start-bg) 80%,
+   var(--cpu-sticker) 80%, var(--cpu-sticker) 90%,
+  var(--cpu-start-bg) 90%, var(--cpu-start-bg) 100%);
+  top: -10%;
+}
+
+.top-bg div:nth-child(1) {
+   transform: skewY(15deg);
+}
+
+.top-bg div:nth-child(2) {
+   transform: skewY(-15deg); 
+}
+
+.base {
+  position: absolute;
+  top: 70%;
+  right: 5%;
+  height: 10px;
+  width: 30%;
+  background: linear-gradient(to right, transparent 0%, transparent 10%,
+  var(--cpu-start-bg) 10%, var(--cpu-start-bg) 25%,
+  transparent 25%, transparent 75%,
+    var(--cpu-start-bg) 75%, var(--cpu-start-bg) 90%,
+  transparent 90%, transparent 100%
+  )
+}
+
+.themes-container {
+  top: 350px;
+  position: absolute;
+}
+
+.button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 1px gray;
+}
+
+.green {
+  background: #00A19D;
+  color: white;
+}
